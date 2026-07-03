@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Leaf Village TCG</title>
+    <meta name="description" content="Hidden Leaf Village TCG is an independent Naruto TCG community for collectors, players and fans.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <svg class="svg-logo-library" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="hlv-logo" viewBox="0 0 1024 1024">
+            <defs>
+                <radialGradient id="logo-bg" cx="50%" cy="50%" r="55%">
+                    <stop offset="0%" stop-color="#1b1208"/>
+                    <stop offset="65%" stop-color="#070707"/>
+                    <stop offset="100%" stop-color="#000000"/>
+                </radialGradient>
+
+                <linearGradient id="logo-orange" x1="20%" y1="15%" x2="80%" y2="85%">
+                    <stop offset="0%" stop-color="#ffcf66"/>
+                    <stop offset="40%" stop-color="#ff7a00"/>
+                    <stop offset="100%" stop-color="#b93d00"/>
+                </linearGradient>
+
+                <filter id="logo-glow">
+                    <feGaussianBlur stdDeviation="9" result="blur"/>
+                    <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <circle cx="512" cy="512" r="470" fill="url(#logo-bg)"/>
+            <circle cx="512" cy="512" r="452" fill="none" stroke="url(#logo-orange)" stroke-width="18" filter="url(#logo-glow)"/>
+            <circle cx="512" cy="512" r="395" fill="none" stroke="#ff7a00" stroke-width="8" opacity="0.45"/>
+
+            <path
+                d="M255 650 C255 420 405 260 610 255 C735 252 820 315 842 410 L780 410 C757 350 695 315 610 318 C443 324 323 455 323 630 L255 650Z"
+                fill="url(#logo-orange)"
+                filter="url(#logo-glow)"/>
+
+            <path
+                d="M332 650 C342 492 448 382 595 382 C704 382 778 450 778 542 C778 635 705 704 611 704 C529 704 470 650 470 580 C470 515 521 470 580 470 C635 470 674 506 674 556 C674 603 640 636 596 636 C562 636 537 616 537 586 C537 561 556 544 579 544 C595 544 608 555 608 570 C608 580 602 588 593 593 C623 590 645 567 645 535 C645 491 608 459 560 459 C495 459 441 510 441 582 C441 672 513 736 612 736 C728 736 819 650 819 538 C819 425 727 342 596 342 C418 342 286 476 275 650 Z"
+                fill="url(#logo-orange)"
+                filter="url(#logo-glow)"/>
+
+            <path d="M778 410 L868 330 L870 412 Z" fill="url(#logo-orange)" filter="url(#logo-glow)"/>
+            <path d="M255 650 L355 650 L300 760 Z" fill="url(#logo-orange)" filter="url(#logo-glow)"/>
+
+            <circle cx="512" cy="512" r="470" fill="none" stroke="#ff9a24" stroke-width="5" opacity="0.35"/>
+        </symbol>
+    </svg>
+
+    <header class="navbar">
+        <a class="brand" href="#">
+            <svg class="logo-svg brand-logo">
+                <use href="#hlv-logo"></use>
+            </svg>
+
+            <span>Hidden Leaf <strong>Village TCG</strong></span>
+        </a>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#coming-soon">Coming Soon</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-bg-symbol"></div>
+
+        <div class="hero-content">
+            <svg class="logo-svg main-logo">
+                <use href="#hlv-logo"></use>
+            </svg>
+
+            <p class="badge">Naruto Trading Card Game Community</p>
+
+            <h1>
+                Hidden Leaf<br>
+                <span>Village TCG</span>
+            </h1>
+
+            <p class="subtitle">
+                A community hub for Naruto Trading Card Game collectors, players and fans.
+            </p>
+
+            <div class="buttons">
+                <a class="btn" href="https://www.instagram.com/hidden_leaf_village_tcg/" target="_blank">
+                    Follow Instagram
+                </a>
+
+                <a class="btn secondary" href="#contact">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-cards">
+            <div class="hero-card">
+                <div class="icon">👥</div>
+                <h3>Community</h3>
+                <p>Connect with collectors and players from around the world.</p>
+            </div>
+
+            <div class="hero-card">
+                <div class="icon">🃏</div>
+                <h3>Trading Cards</h3>
+                <p>Discuss, trade and showcase your favorite Naruto TCG cards.</p>
+            </div>
+
+            <div class="hero-card">
+                <div class="icon">🍃</div>
+                <h3>Stay Updated</h3>
+                <p>Follow news, releases and updates from the Naruto TCG world.</p>
+            </div>
+        </div>
+    </main>
+
+    <section id="about" class="section about">
+        <p class="section-label">About Us</p>
+        <h2>Built for the Naruto TCG community</h2>
+
+        <p>
+            Hidden Leaf Village TCG is an independent community project created for
+            Naruto Trading Card Game collectors, players and fans.
+        </p>
+
+        <p>
+            Our goal is to build a place where the community can discover news,
+            upcoming products, collections, tournaments and connect with other fans.
+        </p>
+    </section>
+
+    <section id="coming-soon" class="section vision">
+        <p class="section-label">Coming Soon</p>
+        <h2>What we want to build</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>📰 Latest News</h3>
+                <p>Updates about Naruto TCG announcements and product releases.</p>
+            </div>
+
+            <div class="card">
+                <h3>🃏 Card Database</h3>
+                <p>Future card lists, expansions and collectible information.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏆 Tournaments</h3>
+                <p>Information about local events and competitive play.</p>
+            </div>
+
+            <div class="card">
+                <h3>💬 Community</h3>
+                <p>Connect with collectors and players from around the world.</p>
+            </div>
+
+            <div class="card">
+                <h3>⭐ Collection Showcase</h3>
+                <p>Share collections and discover rare Naruto cards.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎁 Giveaways</h3>
+                <p>Community giveaways and future special events.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <p class="section-label">Contact Us</p>
+        <h2>Send us a message</h2>
+
+        <p class="section-text">
+            Have a question, suggestion or partnership idea?
+            Send us a message.
+        </p>
+
+        <form id="contact-form" action="https://formspree.io/f/xjgqjogk" method="POST">
+            <input type="hidden" name="_subject" value="New message from Hidden Leaf Village TCG website">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required>
+
+            <textarea
+                name="message"
+                placeholder="Write your message..."
+                required></textarea>
+
+            <button id="submit-button" type="submit">
+                Send Message
+            </button>
+
+            <p id="form-status" class="form-status"></p>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <svg class="logo-svg footer-icon">
+                <use href="#hlv-logo"></use>
+            </svg>
+
+            <span>Hidden Leaf Village TCG</span>
+        </div>
+
+        <p>© 2026 Hidden Leaf Village TCG</p>
+
+        <p class="small">
+            Independent fan community. Not affiliated with Naruto, Bandai or any official rights holder.
+        </p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        const statusMessage = document.getElementById("form-status");
+        const submitButton = document.getElementById("submit-button");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+            statusMessage.textContent = "";
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    window.location.href = "thanks.html";
+                } else {
+                    statusMessage.textContent = "Something went wrong. Please try again.";
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Send Message";
+                }
+            } catch (error) {
+                statusMessage.textContent = "Something went wrong. Please try again.";
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+            }
+        });
+    </script>
+
+</body>
+</html>
