@@ -16,32 +16,33 @@ body {
     overflow-x: hidden;
 }
 
-/* Logo image */
-.logo-img {
+/* Logo SVG */
+.logo-svg {
     display: block;
-    object-fit: contain;
     border-radius: 50%;
     flex-shrink: 0;
+    overflow: visible;
 }
 
 .brand-logo {
     width: 42px;
     height: 42px;
-    box-shadow: 0 0 18px rgba(255, 122, 0, 0.45);
+    filter: drop-shadow(0 0 14px rgba(255, 122, 0, 0.55));
 }
 
 .main-logo {
     width: 185px;
     height: 185px;
     margin: 0 auto 20px;
-    box-shadow:
-        0 0 35px rgba(255, 122, 0, 0.65),
-        0 0 80px rgba(80, 255, 90, 0.18);
+    filter:
+        drop-shadow(0 0 24px rgba(255, 122, 0, 0.75))
+        drop-shadow(0 0 52px rgba(80, 255, 90, 0.16));
 }
 
 .footer-icon {
     width: 34px;
     height: 34px;
+    filter: drop-shadow(0 0 10px rgba(255, 122, 0, 0.45));
 }
 
 body::before {

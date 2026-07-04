@@ -9,9 +9,168 @@
 </head>
 <body>
 
+    <!-- LOGO DEFINICE - logo je přímo v kódu -->
+    <svg style="display: none;" aria-hidden="true">
+        <symbol id="hlv-logo" viewBox="0 0 1024 1024">
+            <defs>
+                <radialGradient id="logoFill" cx="50%" cy="50%" r="60%">
+                    <stop offset="0%" stop-color="#ffcf63"/>
+                    <stop offset="35%" stop-color="#ff8a00"/>
+                    <stop offset="70%" stop-color="#ff5a00"/>
+                    <stop offset="100%" stop-color="#b83300"/>
+                </radialGradient>
+
+                <filter id="orangeGlow" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="7" result="blur"/>
+                    <feFlood flood-color="#ff6a00" flood-opacity="0.95"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <rect width="1024" height="1024" fill="#030303"/>
+
+            <circle
+                cx="512"
+                cy="512"
+                r="430"
+                fill="none"
+                stroke="url(#logoFill)"
+                stroke-width="34"
+                filter="url(#orangeGlow)"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="
+                M 188 716
+                C 255 626, 288 510, 315 388
+                C 355 210, 510 139, 668 160
+                C 777 174, 848 235, 891 297
+                L 931 258
+                C 946 243, 969 244, 982 260
+                C 995 276, 994 299, 979 314
+                L 895 397
+                C 881 411, 859 410, 846 396
+                C 796 340, 735 307, 655 301
+                C 542 292, 444 348, 421 455
+
+                C 526 369, 693 391, 777 497
+                C 861 603, 836 759, 734 840
+                C 627 925, 462 899, 383 795
+                C 322 715, 336 599, 407 532
+                C 479 464, 600 460, 666 526
+                C 730 590, 727 696, 660 752
+                C 600 802, 506 791, 465 730
+                C 428 674, 443 598, 496 564
+                C 541 536, 600 542, 632 579
+
+                C 647 596, 646 623, 630 638
+                C 613 653, 587 651, 572 635
+                C 558 620, 536 618, 519 632
+                C 496 652, 493 687, 512 709
+                C 538 739, 590 741, 622 714
+                C 663 679, 667 614, 629 573
+                C 582 522, 492 521, 441 570
+                C 386 623, 382 715, 435 777
+                C 501 853, 625 867, 707 803
+                C 791 738, 807 613, 743 532
+                C 671 441, 526 425, 436 501
+                C 350 575, 326 690, 379 788
+
+                L 222 768
+                C 193 764, 174 740, 188 716
+                Z
+
+                M 283 710
+                L 344 720
+                C 331 687, 326 653, 330 617
+                C 317 650, 302 682, 283 710
+                Z
+                "
+                fill="none"
+                stroke="url(#logoFill)"
+                stroke-width="58"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                filter="url(#orangeGlow)"
+            />
+
+            <circle
+                cx="512"
+                cy="512"
+                r="430"
+                fill="none"
+                stroke="#ffb347"
+                stroke-width="5"
+                opacity="0.8"
+            />
+
+            <path
+                d="
+                M 188 716
+                C 255 626, 288 510, 315 388
+                C 355 210, 510 139, 668 160
+                C 777 174, 848 235, 891 297
+                L 931 258
+                C 946 243, 969 244, 982 260
+                C 995 276, 994 299, 979 314
+                L 895 397
+                C 881 411, 859 410, 846 396
+                C 796 340, 735 307, 655 301
+                C 542 292, 444 348, 421 455
+
+                C 526 369, 693 391, 777 497
+                C 861 603, 836 759, 734 840
+                C 627 925, 462 899, 383 795
+                C 322 715, 336 599, 407 532
+                C 479 464, 600 460, 666 526
+                C 730 590, 727 696, 660 752
+                C 600 802, 506 791, 465 730
+                C 428 674, 443 598, 496 564
+                C 541 536, 600 542, 632 579
+
+                C 647 596, 646 623, 630 638
+                C 613 653, 587 651, 572 635
+                C 558 620, 536 618, 519 632
+                C 496 652, 493 687, 512 709
+                C 538 739, 590 741, 622 714
+                C 663 679, 667 614, 629 573
+                C 582 522, 492 521, 441 570
+                C 386 623, 382 715, 435 777
+                C 501 853, 625 867, 707 803
+                C 791 738, 807 613, 743 532
+                C 671 441, 526 425, 436 501
+                C 350 575, 326 690, 379 788
+
+                L 222 768
+                C 193 764, 174 740, 188 716
+                Z
+
+                M 283 710
+                L 344 720
+                C 331 687, 326 653, 330 617
+                C 317 650, 302 682, 283 710
+                Z
+                "
+                fill="none"
+                stroke="#ffd36a"
+                stroke-width="7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                opacity="0.8"
+            />
+        </symbol>
+    </svg>
+
     <main class="hero">
         <div class="hero-content">
-            <img class="logo-img main-logo" src="logo.webp" alt="Hidden Leaf Village TCG logo">
+            <svg class="logo-svg main-logo" aria-label="Hidden Leaf Village TCG logo">
+                <use href="#hlv-logo"></use>
+            </svg>
 
             <p class="badge">Message Sent</p>
 
