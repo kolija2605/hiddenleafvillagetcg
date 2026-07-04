@@ -4,154 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hidden Leaf Village TCG</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <a class="brand" href="index.html">
-            <div class="brand-logo-circle">
-                <img class="logo-img brand-logo" src="logo.webp" alt="Hidden Leaf Village TCG logo">
-            </div>
-            <span>Hidden Leaf Village TCG</span>
-        </a>
-
-        <nav>
-            <a href="#about">About</a>
-            <a href="#community">Community</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <main class="hero">
-        <div class="hero-content">
-
-            <div class="logo-circle">
-                <img class="logo-img main-logo" src="logo.webp" alt="Hidden Leaf Village TCG logo">
-            </div>
-
-            <p class="badge">Naruto TCG Community</p>
-
-            <h1>Hidden Leaf Village TCG</h1>
-
-            <p class="subtitle">
-                Community hub for Naruto TCG collectors, players and fans.
-            </p>
-
-            <div class="buttons">
-                <a class="btn" href="https://www.instagram.com/hidden_leaf_village_tcg/" target="_blank">
-                    Follow Instagram
-                </a>
-
-                <a class="btn secondary" href="#contact">
-                    Contact Us
-                </a>
-            </div>
-
+<header class="site-header">
+    <a class="brand" href="index.html">
+        <div class="small-logo-circle">
+            <img src="logo.webp" alt="Hidden Leaf Village TCG logo">
         </div>
-    </main>
+        <span>Hidden Leaf <strong>Village TCG</strong></span>
+    </a>
 
-    <section id="about" class="section">
-        <div class="section-card">
-            <p class="section-label">About</p>
-            <h2>Built for Naruto TCG fans</h2>
-            <p>
-                Hidden Leaf Village TCG is a community project focused on Naruto trading cards,
-                collectors, players, news and future events.
-            </p>
-        </div>
-    </section>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#coming-soon">Coming Soon</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section id="community" class="section">
-        <div class="grid">
-            <div class="info-card">
-                <h3>Collectors</h3>
-                <p>
-                    Share pulls, collections, rare cards and your favorite Naruto TCG moments.
-                </p>
-            </div>
+<main class="hero">
+    <div class="hero-content">
 
-            <div class="info-card">
-                <h3>Players</h3>
-                <p>
-                    Connect with other players, learn the game and prepare for future matches.
-                </p>
-            </div>
-
-            <div class="info-card">
-                <h3>Community</h3>
-                <p>
-                    Follow updates, meet other fans and help grow the Naruto TCG scene.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="contact-card">
-            <p class="section-label">Contact</p>
-            <h2>Send us a message</h2>
-            <p>
-                Want to join the community, ask something or collaborate?
-                Send us a message here.
-            </p>
-
-            <form id="contactForm" action="https://formspree.io/f/xjgqjogk" method="POST">
-                <input type="text" name="name" placeholder="Your name" required>
-
-                <input type="email" name="email" placeholder="Your email" required>
-
-                <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-
-                <button class="btn form-btn" type="submit">
-                    Send Message
-                </button>
-            </form>
-
-            <p id="formStatus" class="form-status"></p>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-logo-circle">
-            <img class="logo-img footer-icon" src="logo.webp" alt="Hidden Leaf Village TCG logo">
+        <div class="main-logo-circle">
+            <img src="logo.webp" alt="Hidden Leaf Village TCG logo">
         </div>
 
-        <p>Hidden Leaf Village TCG</p>
-        <span>Made for the Naruto TCG community.</span>
-    </footer>
+        <p class="badge">Naruto Trading Card Game Community</p>
 
-    <script>
-        const form = document.getElementById("contactForm");
-        const status = document.getElementById("formStatus");
+        <h1>
+            Hidden Leaf<br>
+            <span>Village TCG</span>
+        </h1>
 
-        form.addEventListener("submit", async function (event) {
-            event.preventDefault();
+        <p class="subtitle">
+            A community hub for Naruto Trading Card Game collectors, players and fans.
+        </p>
 
-            const data = new FormData(form);
+        <div class="buttons">
+            <a class="btn" href="https://www.instagram.com/hidden_leaf_village_tcg/" target="_blank">
+                Follow Instagram
+            </a>
 
-            status.textContent = "Sending message...";
+            <a class="btn secondary" href="#contact">
+                Contact Us
+            </a>
+        </div>
 
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        "Accept": "application/json"
-                    }
-                });
+    </div>
+</main>
 
-                if (response.ok) {
-                    window.location.href = "thanks.html";
-                } else {
-                    status.textContent = "Something went wrong. Please try again.";
+<section id="about" class="section">
+    <div class="card">
+        <p class="section-label">About</p>
+        <h2>Welcome to Hidden Leaf Village TCG</h2>
+        <p>
+            Hidden Leaf Village TCG is a community project for Naruto Trading Card Game fans.
+            Our goal is to connect collectors, players and fans in one place.
+        </p>
+    </div>
+</section>
+
+<section id="coming-soon" class="section">
+    <div class="grid">
+        <div class="info-card">
+            <h3>Collectors</h3>
+            <p>Share pulls, rare cards, collections and your favorite Naruto TCG moments.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Players</h3>
+            <p>Find other players, learn the game and prepare for future matches.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Community</h3>
+            <p>Follow updates, join the project and help grow the Naruto TCG scene.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="card contact-card">
+        <p class="section-label">Contact</p>
+        <h2>Send us a message</h2>
+        <p>
+            Want to join the community, ask something or collaborate?
+            Send us a message here.
+        </p>
+
+        <form id="contactForm" action="https://formspree.io/f/xjgqjogk" method="POST">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+
+            <button class="btn form-btn" type="submit">
+                Send Message
+            </button>
+        </form>
+
+        <p id="formStatus" class="form-status"></p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-logo-circle">
+        <img src="logo.webp" alt="Hidden Leaf Village TCG logo">
+    </div>
+    <p>Hidden Leaf Village TCG</p>
+    <span>Made for the Naruto TCG community.</span>
+</footer>
+
+<script>
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const data = new FormData(form);
+        status.textContent = "Sending message...";
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    "Accept": "application/json"
                 }
-            } catch (error) {
+            });
+
+            if (response.ok) {
+                window.location.href = "thanks.html";
+            } else {
                 status.textContent = "Something went wrong. Please try again.";
             }
-        });
-    </script>
+        } catch (error) {
+            status.textContent = "Something went wrong. Please try again.";
+        }
+    });
+</script>
 
 </body>
 </html>
