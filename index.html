@@ -4,205 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hidden Leaf Village TCG</title>
-    <meta name="description" content="Hidden Leaf Village TCG is an independent Naruto TCG community for collectors, players and fans.">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- LOGO DEFINICE - nic nenahráváš, logo je přímo v kódu -->
-    <svg style="display: none;" aria-hidden="true">
-        <symbol id="hlv-logo" viewBox="0 0 1024 1024">
-            <defs>
-                <radialGradient id="logoFill" cx="50%" cy="50%" r="60%">
-                    <stop offset="0%" stop-color="#ffcf63"/>
-                    <stop offset="35%" stop-color="#ff8a00"/>
-                    <stop offset="70%" stop-color="#ff5a00"/>
-                    <stop offset="100%" stop-color="#b83300"/>
-                </radialGradient>
-
-                <filter id="orangeGlow" x="-40%" y="-40%" width="180%" height="180%">
-                    <feGaussianBlur stdDeviation="7" result="blur"/>
-                    <feFlood flood-color="#ff6a00" flood-opacity="0.95"/>
-                    <feComposite in2="blur" operator="in"/>
-                    <feMerge>
-                        <feMergeNode/>
-                        <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                </filter>
-            </defs>
-
-            <rect width="1024" height="1024" fill="#030303"/>
-
-            <!-- vnější kruh -->
-            <circle
-                cx="512"
-                cy="512"
-                r="430"
-                fill="none"
-                stroke="url(#logoFill)"
-                stroke-width="34"
-                filter="url(#orangeGlow)"
-                stroke-linecap="round"
-            />
-
-            <!-- přesný leaf / spiral znak -->
-            <path
-                d="
-                M 188 716
-                C 255 626, 288 510, 315 388
-                C 355 210, 510 139, 668 160
-                C 777 174, 848 235, 891 297
-                L 931 258
-                C 946 243, 969 244, 982 260
-                C 995 276, 994 299, 979 314
-                L 895 397
-                C 881 411, 859 410, 846 396
-                C 796 340, 735 307, 655 301
-                C 542 292, 444 348, 421 455
-
-                C 526 369, 693 391, 777 497
-                C 861 603, 836 759, 734 840
-                C 627 925, 462 899, 383 795
-                C 322 715, 336 599, 407 532
-                C 479 464, 600 460, 666 526
-                C 730 590, 727 696, 660 752
-                C 600 802, 506 791, 465 730
-                C 428 674, 443 598, 496 564
-                C 541 536, 600 542, 632 579
-
-                C 647 596, 646 623, 630 638
-                C 613 653, 587 651, 572 635
-                C 558 620, 536 618, 519 632
-                C 496 652, 493 687, 512 709
-                C 538 739, 590 741, 622 714
-                C 663 679, 667 614, 629 573
-                C 582 522, 492 521, 441 570
-                C 386 623, 382 715, 435 777
-                C 501 853, 625 867, 707 803
-                C 791 738, 807 613, 743 532
-                C 671 441, 526 425, 436 501
-                C 350 575, 326 690, 379 788
-
-                L 222 768
-                C 193 764, 174 740, 188 716
-                Z
-
-                M 283 710
-                L 344 720
-                C 331 687, 326 653, 330 617
-                C 317 650, 302 682, 283 710
-                Z
-                "
-                fill="none"
-                stroke="url(#logoFill)"
-                stroke-width="58"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                filter="url(#orangeGlow)"
-            />
-
-            <!-- lehký ostrý okraj -->
-            <circle
-                cx="512"
-                cy="512"
-                r="430"
-                fill="none"
-                stroke="#ffb347"
-                stroke-width="5"
-                opacity="0.8"
-            />
-
-            <path
-                d="
-                M 188 716
-                C 255 626, 288 510, 315 388
-                C 355 210, 510 139, 668 160
-                C 777 174, 848 235, 891 297
-                L 931 258
-                C 946 243, 969 244, 982 260
-                C 995 276, 994 299, 979 314
-                L 895 397
-                C 881 411, 859 410, 846 396
-                C 796 340, 735 307, 655 301
-                C 542 292, 444 348, 421 455
-
-                C 526 369, 693 391, 777 497
-                C 861 603, 836 759, 734 840
-                C 627 925, 462 899, 383 795
-                C 322 715, 336 599, 407 532
-                C 479 464, 600 460, 666 526
-                C 730 590, 727 696, 660 752
-                C 600 802, 506 791, 465 730
-                C 428 674, 443 598, 496 564
-                C 541 536, 600 542, 632 579
-
-                C 647 596, 646 623, 630 638
-                C 613 653, 587 651, 572 635
-                C 558 620, 536 618, 519 632
-                C 496 652, 493 687, 512 709
-                C 538 739, 590 741, 622 714
-                C 663 679, 667 614, 629 573
-                C 582 522, 492 521, 441 570
-                C 386 623, 382 715, 435 777
-                C 501 853, 625 867, 707 803
-                C 791 738, 807 613, 743 532
-                C 671 441, 526 425, 436 501
-                C 350 575, 326 690, 379 788
-
-                L 222 768
-                C 193 764, 174 740, 188 716
-                Z
-
-                M 283 710
-                L 344 720
-                C 331 687, 326 653, 330 617
-                C 317 650, 302 682, 283 710
-                Z
-                "
-                fill="none"
-                stroke="#ffd36a"
-                stroke-width="7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                opacity="0.8"
-            />
-        </symbol>
-    </svg>
-
-    <header class="navbar">
-        <a class="brand" href="#">
-            <svg class="logo-svg brand-logo" aria-label="Hidden Leaf Village TCG logo">
-                <use href="#hlv-logo"></use>
-            </svg>
-
-            <span>Hidden Leaf <strong>Village TCG</strong></span>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <div class="brand-logo-circle">
+                <img class="logo-img brand-logo" src="logo.webp" alt="Hidden Leaf Village TCG logo">
+            </div>
+            <span>Hidden Leaf Village TCG</span>
         </a>
 
         <nav>
             <a href="#about">About</a>
-            <a href="#coming-soon">Coming Soon</a>
+            <a href="#community">Community</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main class="hero">
-        <div class="hero-bg-symbol"></div>
-
         <div class="hero-content">
-            <svg class="logo-svg main-logo" aria-label="Hidden Leaf Village TCG logo">
-                <use href="#hlv-logo"></use>
-            </svg>
 
-            <p class="badge">Naruto Trading Card Game Community</p>
+            <div class="logo-circle">
+                <img class="logo-img main-logo" src="logo.webp" alt="Hidden Leaf Village TCG logo">
+            </div>
 
-            <h1>
-                Hidden Leaf<br>
-                <span>Village TCG</span>
-            </h1>
+            <p class="badge">Naruto TCG Community</p>
+
+            <h1>Hidden Leaf Village TCG</h1>
 
             <p class="subtitle">
-                A community hub for Naruto Trading Card Game collectors, players and fans.
+                Community hub for Naruto TCG collectors, players and fans.
             </p>
 
             <div class="buttons">
@@ -214,152 +48,95 @@
                     Contact Us
                 </a>
             </div>
-        </div>
 
-        <div class="hero-cards">
-            <div class="hero-card">
-                <div class="icon">👥</div>
-                <h3>Community</h3>
-                <p>Connect with collectors and players from around the world.</p>
-            </div>
-
-            <div class="hero-card">
-                <div class="icon">🃏</div>
-                <h3>Trading Cards</h3>
-                <p>Discuss, trade and showcase your favorite Naruto TCG cards.</p>
-            </div>
-
-            <div class="hero-card">
-                <div class="icon">🍃</div>
-                <h3>Stay Updated</h3>
-                <p>Follow news, releases and updates from the Naruto TCG world.</p>
-            </div>
         </div>
     </main>
 
-    <section id="about" class="section about">
-        <p class="section-label">About Us</p>
-        <h2>Built for the Naruto TCG community</h2>
-
-        <p>
-            Hidden Leaf Village TCG is an independent community project created for
-            Naruto Trading Card Game collectors, players and fans.
-        </p>
-
-        <p>
-            Our goal is to build a place where the community can discover news,
-            upcoming products, collections, tournaments and connect with other fans.
-        </p>
+    <section id="about" class="section">
+        <div class="section-card">
+            <p class="section-label">About</p>
+            <h2>Built for Naruto TCG fans</h2>
+            <p>
+                Hidden Leaf Village TCG is a community project focused on Naruto trading cards,
+                collectors, players, news and future events.
+            </p>
+        </div>
     </section>
 
-    <section id="coming-soon" class="section vision">
-        <p class="section-label">Coming Soon</p>
-        <h2>What we want to build</h2>
-
-        <div class="cards">
-            <div class="card">
-                <h3>📰 Latest News</h3>
-                <p>Updates about Naruto TCG announcements and product releases.</p>
+    <section id="community" class="section">
+        <div class="grid">
+            <div class="info-card">
+                <h3>Collectors</h3>
+                <p>
+                    Share pulls, collections, rare cards and your favorite Naruto TCG moments.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>🃏 Card Database</h3>
-                <p>Future card lists, expansions and collectible information.</p>
+            <div class="info-card">
+                <h3>Players</h3>
+                <p>
+                    Connect with other players, learn the game and prepare for future matches.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>🏆 Tournaments</h3>
-                <p>Information about local events and competitive play.</p>
-            </div>
-
-            <div class="card">
-                <h3>💬 Community</h3>
-                <p>Connect with collectors and players from around the world.</p>
-            </div>
-
-            <div class="card">
-                <h3>⭐ Collection Showcase</h3>
-                <p>Share collections and discover rare Naruto cards.</p>
-            </div>
-
-            <div class="card">
-                <h3>🎁 Giveaways</h3>
-                <p>Community giveaways and future special events.</p>
+            <div class="info-card">
+                <h3>Community</h3>
+                <p>
+                    Follow updates, meet other fans and help grow the Naruto TCG scene.
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section contact">
-        <p class="section-label">Contact Us</p>
-        <h2>Send us a message</h2>
+    <section id="contact" class="section">
+        <div class="contact-card">
+            <p class="section-label">Contact</p>
+            <h2>Send us a message</h2>
+            <p>
+                Want to join the community, ask something or collaborate?
+                Send us a message here.
+            </p>
 
-        <p class="section-text">
-            Have a question, suggestion or partnership idea?
-            Send us a message.
-        </p>
+            <form id="contactForm" action="https://formspree.io/f/xjgqjogk" method="POST">
+                <input type="text" name="name" placeholder="Your name" required>
 
-        <form id="contact-form" action="https://formspree.io/f/xjgqjogk" method="POST">
-            <input type="hidden" name="_subject" value="New message from Hidden Leaf Village TCG website">
+                <input type="email" name="email" placeholder="Your email" required>
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required>
+                <textarea name="message" rows="5" placeholder="Your message" required></textarea>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required>
+                <button class="btn form-btn" type="submit">
+                    Send Message
+                </button>
+            </form>
 
-            <textarea
-                name="message"
-                placeholder="Write your message..."
-                required></textarea>
-
-            <button id="submit-button" type="submit">
-                Send Message
-            </button>
-
-            <p id="form-status" class="form-status"></p>
-        </form>
+            <p id="formStatus" class="form-status"></p>
+        </div>
     </section>
 
-    <footer>
-        <div class="footer-logo">
-            <svg class="logo-svg footer-icon" aria-label="Hidden Leaf Village TCG logo">
-                <use href="#hlv-logo"></use>
-            </svg>
-
-            <span>Hidden Leaf Village TCG</span>
+    <footer class="footer">
+        <div class="footer-logo-circle">
+            <img class="logo-img footer-icon" src="logo.webp" alt="Hidden Leaf Village TCG logo">
         </div>
 
-        <p>© 2026 Hidden Leaf Village TCG</p>
-
-        <p class="small">
-            Independent fan community. Not affiliated with Naruto, Bandai or any official rights holder.
-        </p>
+        <p>Hidden Leaf Village TCG</p>
+        <span>Made for the Naruto TCG community.</span>
     </footer>
 
     <script>
-        const form = document.getElementById("contact-form");
-        const statusMessage = document.getElementById("form-status");
-        const submitButton = document.getElementById("submit-button");
+        const form = document.getElementById("contactForm");
+        const status = document.getElementById("formStatus");
 
         form.addEventListener("submit", async function (event) {
             event.preventDefault();
 
-            submitButton.disabled = true;
-            submitButton.textContent = "Sending...";
-            statusMessage.textContent = "";
+            const data = new FormData(form);
 
-            const formData = new FormData(form);
+            status.textContent = "Sending message...";
 
             try {
                 const response = await fetch(form.action, {
                     method: form.method,
-                    body: formData,
+                    body: data,
                     headers: {
                         "Accept": "application/json"
                     }
@@ -368,14 +145,10 @@
                 if (response.ok) {
                     window.location.href = "thanks.html";
                 } else {
-                    statusMessage.textContent = "Something went wrong. Please try again.";
-                    submitButton.disabled = false;
-                    submitButton.textContent = "Send Message";
+                    status.textContent = "Something went wrong. Please try again.";
                 }
             } catch (error) {
-                statusMessage.textContent = "Something went wrong. Please try again.";
-                submitButton.disabled = false;
-                submitButton.textContent = "Send Message";
+                status.textContent = "Something went wrong. Please try again.";
             }
         });
     </script>
